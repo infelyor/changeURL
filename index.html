@@ -6,8 +6,13 @@
 	<body>
         <p id="test">hello!</p>
 		<script>
-            console.log(location.herf);
-            document.getElementById('test').innerHTML = location.href;
+            var url = location.href;
+            var result = url.replace(/changeURL\?/,'');
+            result = 'shortcuts://run-shortcut?name=LikeArtist&input=' + result;
+            
+            console.log(result);
+            location.href = result;
         </script>
 	</body>
 </html>
+
