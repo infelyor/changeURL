@@ -7,7 +7,7 @@
         <p id="test">hello!</p>
 		<script>
             var url = location.href;
-            var result = url.replace(/changeURL\?/,'');
+            var result = url.replace(/.*changeURL\?/,'');
             result = 'shortcuts://run-shortcut?name=LikeArtist&input=' + result;
             
             console.log(result);
